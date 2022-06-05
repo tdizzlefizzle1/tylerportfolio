@@ -21,9 +21,17 @@ def tylerhobby():
 def loganwork():
     return render_template('loganwork.html')
 
+@app.route('/loganshobbies/')
+def loganhobby():
+    return render_template('loganhobby.html')
+
 @app.route('/royswork/')
 def roywork():
     return render_template('roywork.html')
+
+@app.route('/royshobbies/')
+def royhobby():
+    return render_template('royhobby.html')
 
 if __name__ ==  "__main__":
     app.run()
