@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> Tyler's Portfolio Page</title>
-        </head>
-        <body>
-            <h1>Tyler's Portfolio Page</h1>
-            <div class="img-holder">
-                <img src="/static/img/tyler.jpg" width="200" height="200"/>
-            </div>
-            <h3>About Myself</h3>
-            <p>Energetic person with a passion for programming. 
-            I started my college degree at The University of Texas at San Antonio and am majoring 
-            in Computer Science.
-            I enjoy reading comic books
-            and spending time with my family. 
-            </p>
+  <head>
+    <title>Tyler's Portfolio Page</title>
+  </head>
+  <body>
+    <header class="nav-bar">
+      <div class="nav-content">
+        <a href="/">
+          <div class="nav-logo">
+            <img src="/static/img/logo.svg" />
+          </div>
+        </a>
+      </div>
+    </header>
+    <h1>Tyler's Portfolio Page</h1>
+    <div class="img-holder">
+      <img src="/static/img/tyler/tyler.jpg" width="200" height="200" />
+    </div>
+    <h3>About Myself</h3>
+    <p>
+      Energetic person with a passion for programming. I started my college
+      degree at The University of Texas at San Antonio and am majoring in
+      Computer Science. I enjoy reading comic books and spending time with my
+      family.
+    </p>
 
-            <h3>Previous Work Experience</h3>
-            <p>- MARCH 2020 - CURRENT<br>
-                STYLE & TECH TEAM MEMBER, TARGET CORPORATION
-                Trained and developed new sales team associates in products, selling techniques and company procedures.
-                Helped foster a teamwork friendly environment to create seamless workflow.
-                Implemented up-selling strategies such as recommending accessories and purchases to boost revenue.
-                Great product knowledge on the latest items. 
-            </p>
-            <p>- OCT 2018 - FEB 2020<br>
-                SALES ASSOCIATE, AMERICAN EAGLE OUTFITTERS
-                Mentored new team members on registers, meeting customer needs, maximizing group performance and maintaining high satisfaction with customers.
-                Maintained organized, presentable merchandise to drive continuous sales.
-            </p>
-            <p>- NOV 2017 - JUN 2018<br>
-                RESTAURANT BUSSER, RED ROBIN INTERNATIONAL
-                Collected trash, wiped up spills and removed trays to maintain customer service and satisfaction. 
-                Assisted with kitchen prep work to help operations run smoothly and meet company standards.
-                Completed extra cleaning work on garbage cans, racks, dry storage areas and more to keep kitchen clean.
-            </p>
+    <h3>Previous Work Experience</h3>
+    <p>
+      - MARCH 2020 - CURRENT<br />
+      STYLE & TECH TEAM MEMBER, TARGET CORPORATION Trained and developed new
+      sales team associates in products, selling techniques and company
+      procedures. Helped foster a teamwork friendly environment to create
+      seamless workflow. Implemented up-selling strategies such as recommending
+      accessories and purchases to boost revenue. Great product knowledge on the
+      latest items.
+    </p>
+    <p>
+      - OCT 2018 - FEB 2020<br />
+      SALES ASSOCIATE, AMERICAN EAGLE OUTFITTERS Mentored new team members on
+      registers, meeting customer needs, maximizing group performance and
+      maintaining high satisfaction with customers. Maintained organized,
+      presentable merchandise to drive continuous sales.
+    </p>
+    <p>
+      - NOV 2017 - JUN 2018<br />
+      RESTAURANT BUSSER, RED ROBIN INTERNATIONAL Collected trash, wiped up
+      spills and removed trays to maintain customer service and satisfaction.
+      Assisted with kitchen prep work to help operations run smoothly and meet
+      company standards. Completed extra cleaning work on garbage cans, racks,
+      dry storage areas and more to keep kitchen clean.
+    </p>
 
-            <h3>Education</h3>
-            <p>- EXPECTED MAY 2023 <br>
-                BACHELOR OF SCIENCE, UNIVERSITY OF TEXAS AT SAN ANTONIO
-                Continuing education in Computer Science
-                Programming languages: Java, C, Swift, and Python.  
-                Currently in ACM UTSA (January 2022 - Current)
-            </p>
-            <p>- JUN 2019<br>
-                HIGH SCHOOL DIPLOMA, JOHN MARSHALL HARLAN HIGH SCHOOL
-                Member of JROTC, the Cross-Country team, Adopt-A-Highway, and the Debate team.
-                Graduated with 26 college credits from Dual Credit courses. Graduated with 3.7 GPA.
-                </p>
-            <h3>Hobbies</h3>
-            <p>
-                
-            </p>
-        </body>
+    <h3>Education</h3>
+    <p>
+      - EXPECTED MAY 2023 <br />
+      BACHELOR OF SCIENCE, UNIVERSITY OF TEXAS AT SAN ANTONIO Continuing
+      education in Computer Science Programming languages: Java, C, Swift, and
+      Python. Currently in ACM UTSA (January 2022 - Current)
+    </p>
+    <p>
+      - JUN 2019<br />
+      HIGH SCHOOL DIPLOMA, JOHN MARSHALL HARLAN HIGH SCHOOL Member of JROTC, the
+      Cross-Country team, Adopt-A-Highway, and the Debate team. Graduated with
+      26 college credits from Dual Credit courses. Graduated with 3.7 GPA.
+    </p>
+    <a href="{{url_for('tylerhobby')}}"> <h3>Hobbies</h3></a>
+    <h3>Places I Have Visited</h3>
+    <div class="img-holder">
+      <img src="/static/img/tyler/tyler-england.jpg" width="200" height="300" />
+      <a>United Kingdom Map</a>
+      <img src="/static/img/tyler/tyler-us-map.jpg" width="300" height="200" />
+      <a>US Map</a>
+    </div>
+  </body>
 </html>
