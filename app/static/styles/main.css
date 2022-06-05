@@ -99,6 +99,16 @@ body {
   width: 200px;
 }
 
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .banner {
   padding: 20px 0px 50px 0px;
   height: 150px;

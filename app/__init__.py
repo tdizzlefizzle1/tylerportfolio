@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
     return render_template('index.html', title="Picturesque", url=os.getenv("URL"))
@@ -13,6 +12,10 @@ def index():
 @app.route('/tylerswork/')
 def tylerwork():
     return render_template('tylerwork.html')
+    
+@app.route('/tylershobbies/')
+def tylerhobby():
+    return render_template('tylerhobby.html')
 
 @app.route('/loganswork/')
 def loganwork():
