@@ -99,12 +99,7 @@ body {
   width: 200px;
 }
 
-a:link {
-  color: white;
-  text-decoration: none;
-}
-
-a:visited {
+.homeLink {
   color: white;
   text-decoration: none;
 }
