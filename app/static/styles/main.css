@@ -20,6 +20,12 @@ body {
 
 .mainText {
   margin: 10px;
+  min-height: calc(100vh - 201px);
+}
+
+.mainTextTylerHobby {
+  margin: 10px;
+  min-height: calc(100vh - 204px);
 }
 
 .nav-bar {
