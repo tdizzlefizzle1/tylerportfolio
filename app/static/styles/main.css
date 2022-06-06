@@ -94,6 +94,19 @@ body {
   justify-content: center;
 }
 
+.aboutprofile {
+  text-align: center;
+  height: auto;
+  margin: 70px;
+  min-height: calc(100vh - 312.5px);
+}
+
+.aboutprofile h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: black;
+}
+
 .profile {
   text-align: center;
   height: auto;
