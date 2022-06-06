@@ -98,7 +98,7 @@ body {
   text-align: center;
   height: auto;
   margin: 70px;
-  min-height: calc(100vh - 265.5px);
+  min-height: calc(100vh - 312.5px);
 }
 
 .profile h1 {
@@ -161,18 +161,17 @@ body {
   font-weight: 700;
 }
 
-
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
- /* Navbar container */
- .navbar {
+/* Navbar container */
+.navbar {
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
@@ -207,7 +206,8 @@ body {
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   background-color: red;
 }
 
@@ -217,7 +217,7 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -239,4 +239,4 @@ body {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-} 
+}
