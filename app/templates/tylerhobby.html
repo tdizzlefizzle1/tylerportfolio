@@ -1,67 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta property="og:title" content="Personal Portfolio" />
-    <meta property="og:description" content="My Personal Portfolio" />
-    <meta property="og:url" content="{{ url }}" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link lang="sass" rel="stylesheet" href="/static/styles/main.css" />
-    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
   <head>
     <title>Hobbies</title>
   </head>
-  <body>
-    <header class="nav-bar">
-        <div class="nav-content">
-          <a href="/">
-            <div class="nav-logo">
-              <img src="/static/img/logo.svg" />
-            </div>
-          </a>
-        </div>
-      </header>
-    <h3>Hobbies</h3>
-    <p>    
-    <div class="img-holder">
-        <img src="/static/img/tyler/tyler-bookshelf.jpg" width="300" height="400" />
-        </div>
-    <h4>Comics and Manga:</h4>
-      I love to read comic books and manga. I have quite a collection and it's
-      tons of fun diving into these stories.</p>
-      <br><br>
 
+  {% extends 'base.html' %}
+
+  <body>
+    {% block content %}
+
+    <div class="mainText">
+      <h1>Hobbies</h1>
+      <hr style="width:100%; height:6px; background-color: rgb(0,0,0); border:none;" />
+      <p>
+      <h3>Comics and Manga</h3>   
       <div class="img-holder">
-        <img src="/static/img/tyler/taro-board.jpg" width="200" height="200" />
-        <img src="/static/img/tyler/russian-board.jpg" width="200" height="200" />
-        <img src="/static/img/tyler/eva-board-01.jpg" width="200" height="200" />
-        <img src="/static/img/tyler/40s-board.jpg" width="250" height="200" />
-      </div>
+          <img src="/static/img/tyler/tyler-bookshelf.jpg" width="300" height="400" />
+          </div>
       
-      <p>
-        <h4>Building Mechanical Keyboards:</h4>
-      Another cool hobby of mine is that I like to create mechanical keyboards.
-      I like tinkering and building things, plus what is more important to a
-      computer scientist than a keyboard?
+        I love to read comic books and manga. I have quite a collection and it's
+        tons of fun diving into these stories.</p>
+        <hr style="width:100%; height:6px; background-color: rgb(0,0,0); border:none;" />
+        <h3>Building Mechanical Keyboards</h3>
+        <div class="img-holder">
+          <img src="/static/img/tyler/taro-board.jpg" width="150" height="200" />
+          <img src="/static/img/tyler/russian-board.jpg" width="200" height="200" />
+          <img src="/static/img/tyler/eva-board-01.jpg" width="200" height="200" />
+          <img src="/static/img/tyler/40s-board.jpg" width="250" height="200" />
+        </div>
+        
+        <p>
+          
+        Another cool hobby of mine is that I like to create mechanical keyboards.
+        I like tinkering and building things, plus what is more important to a
+        computer scientist than a keyboard?
+        </p>
+        <hr style="width:100%; height:6px; background-color: rgb(0,0,0); border:none;" />
+        <p>
+          <h3>Watching Movies</h3>
+        I also love watching new and exciting movies. My father and I are huge
+        movie fans and have watched so many of them over the years. If you are
+        looking for a classic horror movie nothing beats the original 'A Nightmare
+        On Elm Street' or the third movie in the franchise. If you want a classic
+        super hero movie one of my all time favorites is 'Spider-man 2', however I
+        almost think 2022's 'The Batman' may be better than Spider-man 2 (Open for
+        debate).
       </p>
-      <p>
-        <h4>Watching Movies:</h4>
-      I also love watching new and exciting movies. My father and I are huge
-      movie fans and have watched so many of them over the years. If you are
-      looking for a classic horror movie nothing beats the original 'A Nightmare
-      On Elm Street' or the third movie in the franchise. If you want a classic
-      super hero movie one of my all time favorites is 'Spider-man 2', however I
-      almost think 2022's 'The Batman' may be better than Spider-man 2 (Open for
-      debate).
-    </p>
+      <hr style="width:100%; height:6px; background-color: rgb(0,0,0); border:none;" />
+    </div>
+
+    {% endblock %}
   </body>
 </html>

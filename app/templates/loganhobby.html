@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hobbies</title>
+  </head>
+
+  {% extends 'base.html' %}
+
+  <body>
+    {% block content %}
+
+    <div class="mainText">
+      <h3>Logan's Hobbies</h3>
+      <p>    
+        <h4>Entrepreneurship:</h4>
+          I enjoy growing my knowledge in business and learning about how to start my own.
+          Occasionally, I participate in the entrepreneurship organization at my school, and this year I won an innovation award at the annual startup weekend in Columbia, MO.
+      </p>
+      <div class="img-holder">
+        <img src="/static/img/logan/logan-startupwkd.jpg" width="300" height="400" />
+      </div>
+      <p>
+        <h4>Graphic Design:</h4>
+        After messing with Photoshop and paint.net several years ago, I fell in love with digital art. I began doing commissions for games and communities on Roblox, and then I took two
+        graphic design courses in high school, and two of my pieces got featured in an art show. Currently, I post stuff on my store on RedBubble. 
+      </p>
+      <script type="text/javascript" src="https://www.redbubble.com/assets/external_portfolio.js"></script>
+      <script id="rb-xzfcxvzx" type="text/javascript">new RBExternalPortfolio('www.redbubble.com', 'captainswoosh', 1, 1).renderIframe();</script>
+      <p>
+        <h4>Tennis and Bowling:</h4>
+        Two of my favorite activities are tennis and bowling. Maybe not the typical combination, but I enjoy both equally. 
+        I was on varsity tennis in high school and made the state team for bowling. 
+      </p>
+      <div class="img-holder">
+        <img src="/static/img/logan/logan-tennis.png" width="280" height="400" />
+        <img src="/static/img/logan/logan-bowl.png" width="300" height="400" />
+      </div>
+    </div>
+
+    {% endblock %}
+  </body>
+</html>

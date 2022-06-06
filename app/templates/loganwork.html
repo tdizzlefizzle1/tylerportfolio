@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Logan's Portfolio Page</title>
+  </head>
+
+  {% extends 'base.html' %}
+
+  <body>
+    {% block content %}
+
+    <div class="mainText">
+      <h1>Logan's Portfolio Page</h1>
+      <div class="img-holder">
+        <img src="/static/img/logan/logan.jpg" width="200" height="200" />
+      </div>
+      <h3>About Myself</h3>
+      <p>
+        I'm a computer science student with interests in business and
+        neuroscience seeking to advance human life through development of
+        software and technology.
+      </p>
+
+      <h3>Previous Experience</h3>
+      <p>
+        MAY 2019 - AUG 2021
+        <br />
+        LEAD COMPUTER SCIENCE INSTRUCTOR, CODE NINJAS
+        <ul>
+          <li>Taught programming and development of apps, games, robots, 3D printers, and more using JavaScript, Python, and Lua to classes with up to 20 students</li>
+          <li>Led and managed weeklong camps and tracked progress</li>
+          <li>Received a salary increase</li>
+        </ul>
+      </p>
+      <p>
+        JUL 2021
+        <br />
+        TECHNICAL SUMMER ENGAGEMENT PROGRAM, PAYCOM
+        <ul>
+          <li>Completed technical training workshops in GitHub, React, PHP, SQL DBA, C#/.NET, SwiftUI/mobile development, XSS, security, DevOps, Agile, and professional development</li>
+        </ul>
+      </p>
+      <p>
+        MAY 2021 - JUL 2021
+        <br />
+        ONLINE PRIVATE INSTRUCTOR, iD TECH CAMPS
+        <ul>
+          <li>Instructed private online Lua game development lessons to students around the world</li>
+          <li>Received all positive feedback and organically grew enrollment to my courses</li>
+          <li>Helped create new courses</li>
+        </ul>
+      </p>
+      <p>
+        FEB 2021 - JUN 2021
+        <br />
+        INTERN, FORCYTE
+        <ul>
+          <li>Lead analyst for a selective support team in a deep tech incubator</li>
+          <li>Conducted university, industry, venture capitalist, and tech research to scale a wireless power drone startup</li>
+          <li>Helped connect JSON APIs to a Bubble web app</li>
+          <li>Assisted in a funding round and created a market research summary</li>
+        </ul>
+      </p>
+      <p>
+        AUG 2019 - MAY 2020
+        <br />
+        TECHNOLOGY SOLUTIONS, PARKWAY SPARK!
+        <ul>
+          <li>Solved real-world problems with code by exploring industries and their needs</li>
+          <li>Coordinated project scheduling deadlines to maximize efficiency within a group</li>
+          <li>Collaborated to present fully functional solutions using JavaScript, React, and other technologies</li>
+        </ul>
+      </p>
+
+      <h3>Education</h3>
+      <p>
+        EXPECTED MAY 2024 
+        <br />
+        BACHELOR OF SCIENCE COMPUTER SCIENCE, UNIVERSITY OF MISSOURI-COLUMBIA 
+        <ul>
+          <li>GPA: 3.8</li>
+          <li>Activities and societies: Mizzou Computing Association, Neural Engineering Lab, CS/Finance Group</li>
+        </ul>
+      </p>
+      <p>
+        MAY 2020
+        <br />
+        HIGH SCHOOL DIPLOMA, PARKWAY SOUTH HIGH SCHOOL
+      </p>
+      <a href="{{url_for('loganhobby')}}"> <h3>Link to Hobbies</h3></a>
+      <h3>Places I Have Visited</h3>
+      <div class="img-holder">
+        <img
+          src="/static/img/logan/logan-world-map.jpg"
+          width="300"
+          height="200"
+        />
+        <a>World Map</a>
+        <img
+          src="/static/img/logan/logan-us-map.jpg"
+          width="300"
+          height="200"
+        />
+        <a>US Map</a>
+      </div>
+    </div>
+
+    {% endblock %}
+  </body>
+</html>
