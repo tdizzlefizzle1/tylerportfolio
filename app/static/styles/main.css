@@ -60,11 +60,45 @@ body {
   padding-right: 0px;
 }
 
+.footer-bar {
+  width: 100%;
+  display: inline-block;
+  background-color: #1c539f;
+  font-family: "Roboto", serif;
+  font-weight: 700 !important;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.footer-content .logo-touch-target {
+  display: inline-flex;
+  height: 60%;
+  width: 350px;
+}
+
+.footer-content nav {
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding-top: 0px;
+  padding-right: 0px;
+}
+
+.about-us {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 450;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .profile {
-  background-color: #1d539f !important;
   text-align: center;
   height: auto;
   margin: 70px;
+  min-height: calc(100vh - 265.5px);
 }
 
 .profile h1 {
@@ -87,6 +121,7 @@ body {
 }
 
 .profile .profile-picture {
+  background-color: #1d539f !important;
   height: auto;
   display: inline-flex;
   flex-wrap: wrap;
