@@ -33,5 +33,9 @@ def roywork():
 def royhobby():
     return render_template('royhobby.html')
 
+@app.route('/aboutus/')
+def aboutus():
+    return render_template('aboutus.html')
+
 if __name__ ==  "__main__":
     app.run()
