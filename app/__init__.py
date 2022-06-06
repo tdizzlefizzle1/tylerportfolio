@@ -27,7 +27,7 @@ def loganhobby():
 
 @app.route('/royswork/')
 def roywork():
-    return render_template('test.html')
+    return render_template('roywork.html')
 
 @app.route('/royshobbies/')
 def royhobby():
