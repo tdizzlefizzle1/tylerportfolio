@@ -59,8 +59,8 @@ body {
 .profile {
   background-color: #1d539f !important;
   text-align: center;
-  margin: 30px;
   height: auto;
+  margin: 70px;
 }
 
 .profile h1 {
@@ -78,12 +78,11 @@ body {
 }
 
 .profile img:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .profile .profile-picture {
-  margin: 10px;
   height: auto;
   display: inline-flex;
   flex-wrap: wrap;
