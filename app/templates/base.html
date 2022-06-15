@@ -25,13 +25,12 @@
       </div>
     </a>
     <div class="dropdown">
-      <button class="dropbtn">
-        Team Member Pages
+      <button class="dropbtn"> 
+        Pages
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="{{url_for('loganwork')}}">Logan's Page</a>
-        <a href="{{url_for('roywork')}}">Roy's Page</a>
+        <a href="{{url_for('index')}}">Home</a>
         <a href="{{url_for('tylerwork')}}">Tyler's Page</a>
       </div>
     </div>
@@ -40,10 +39,3 @@
 
 {% block content %} {% endblock %}
 
-<footer class="footer-bar">
-  <div class="footer-content">
-    <a href="{{url_for('aboutus')}}" class="about-us">
-      <div class="about-us">About The Team</div>
-    </a>
-  </div>
-</footer>

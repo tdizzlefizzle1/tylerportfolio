@@ -17,25 +17,5 @@ def tylerwork():
 def tylerhobby():
     return render_template('tylerhobby.html')
 
-@app.route('/loganswork/')
-def loganwork():
-    return render_template('loganwork.html')
-
-@app.route('/loganshobbies/')
-def loganhobby():
-    return render_template('loganhobby.html')
-
-@app.route('/royswork/')
-def roywork():
-    return render_template('roywork.html')
-
-@app.route('/royshobbies/')
-def royhobby():
-    return render_template('royhobby.html')
-
-@app.route('/aboutus/')
-def aboutus():
-    return render_template('aboutus.html')
-
 if __name__ ==  "__main__":
     app.run()
