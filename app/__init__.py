@@ -68,7 +68,7 @@ def delete_time_line_post():
 
     post_id = request.form["id"]
     TimelinePost.delete_by_id(post_id)
-    return "deleted post"
+    return "deleted post\n"
 
 if __name__ ==  "__main__":
     app.run()
