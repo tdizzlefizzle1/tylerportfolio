@@ -1,6 +1,8 @@
 import os
 from unicodedata import name
 
+from requests import post
+
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from peewee import *
@@ -31,15 +33,19 @@ mydb.create_tables([TimelinePost])
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="TyRoyLog Portfolio", url=os.getenv("URL"))
+    return render_template('index.html', title="Tyler's Portfolio", url=os.getenv("URL"))
 
 @app.route('/tylerswork/')
 def tylerwork():
-    return render_template('tylerwork.html')
+    return render_template('tylerwork.html', title="Tyler'sWork")
     
 @app.route('/tylershobbies/')
 def tylerhobby():
-    return render_template('tylerhobby.html')
+    return render_template('tylerhobby.html', title="Tyler's Hobbies")
+
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html', title="Timeline")
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
@@ -59,8 +65,10 @@ def get_time_line_post():
     }
 @app.route('/api/timeline_post', methods=['DELETE'])
 def delete_time_line_post():
-    post_to_delete = TimelinePost.get(TimelinePost.id == id)
-    post_to_delete.delete_instance()
+
+    post_id = request.form["id"]
+    TimelinePost.delete_by_id(post_id)
+    return "deleted post"
 
 if __name__ ==  "__main__":
     app.run()
