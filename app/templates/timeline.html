@@ -26,7 +26,18 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
-
+<h3>Posts</h3>
+<div class="timeline">
+    {% for post in timeline %}
+    <div class = "post">
+        <p>Date: {{post.created_at}}</p>
+        <p>Name: {{post.name}}</p>
+        <p>Email: {{post.email}}</p>
+        <p>Content: {{post.content}}</p>
+        <hr>
+    </div>
+    {% endfor %}   
+</div>
     <script>
         const form = document.getElementById('post-form');
         form.addEventListener('submit', function(e){
