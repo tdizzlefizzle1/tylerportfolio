@@ -1,5 +1,5 @@
 #!/bin/bash
-#tmux kill-server
+tmux kill-server
 cd ~/tylerportfolio/
 git fetch && git reset origin/main --hard
 source .venv/bin/activate
