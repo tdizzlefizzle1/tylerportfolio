@@ -1,42 +1,46 @@
-<!-- Required meta tags -->
-<meta charset="utf-8" />
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, shrink-to-fit=no"
-/>
-<meta property="og:title" content="Personal Portfolio" />
-<meta property="og:description" content="My Personal Portfolio" />
-<meta property="og:url" content="{{ url }}" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link
-  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-  rel="stylesheet"
-/>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/styles/main.css"/>
 
-<link lang="sass" rel="stylesheet" href="/static/styles/main.css" />
-<link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
-
-<header class="nav-bar">
-  <div class="nav-content">
-    <a href="/">
-      <div class="nav-logo">
-        <img src="/static/img/logo.svg" />
+    <title>Tyler's Portfolio</title>
+  </head>
+  <body>
+    <div class="container my-3">
+    <div class="row">
+    <div class="col">
+      <a href="/">
+        <img src="https://cdn-icons.flaticon.com/png/512/2198/premium/2198321.png?token=exp=1656387242~hmac=4810a63e9212f06000bf3f8355322730" width="40" height="40">
+      </a>
+    </div>
+    <div class="col">
+        <nav>
+          <ul class="nav nav-pills justify-content-end">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Hobbies</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </a>
-    <div class="dropdown">
-      <button class="dropbtn"> 
-        Pages
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="{{url_for('index')}}">Home</a>
-        <a href="{{url_for('tylerwork')}}">Tyler's Page</a>
-        <a href="{{url_for('timeline')}}">Timeline</a>
       </div>
     </div>
-  </div>
-</header>
-
-{% block content %} {% endblock %}
-
+    {% block content %} {% endblock %}
+  </body>
+</html>

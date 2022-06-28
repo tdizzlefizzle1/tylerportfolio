@@ -28,12 +28,8 @@ mydb.connect()
 mydb.create_tables([TimelinePost])
 
 @app.route('/')
-def index():
-    return render_template('index.html', title="Tyler's Portfolio", url=os.getenv("URL"))
-
-@app.route('/tylerswork/')
 def tylerwork():
-    return render_template('tylerwork.html', title="Tyler'sWork")
+    return render_template('tylerwork.html', title="Tyler'sWork", url=os.getenv("URL"))
     
 @app.route('/tylershobbies/')
 def tylerhobby():
@@ -60,6 +56,7 @@ def get_time_line_post():
             for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())
         ]
     }
+
 @app.route('/api/timeline_post', methods=['DELETE'])
 def delete_time_line_post():
 
