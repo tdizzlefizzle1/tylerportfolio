@@ -95,8 +95,12 @@
           body: payload,
         })
           .then((res) => res.json())
-          .then((data) => console.log(data));
-      });
+          .then((data) => console.log(data))
+      
+          .then(setTimeout(function(){
+            window.location.reload()
+          }, 200));
+        })
     </script>
     {% endblock %}
   </body>
