@@ -3,7 +3,16 @@ from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from peewee import *
 import datetime
+
 from playhouse.shortcuts import model_to_dict
+
+PORTFOLIO_DIR = os.path.dirname(os.path.realpath(__file__))
+CURRENT_DIR = os.path.join(PORTFOLIO_DIR, "app")
+STATIC_DIR = os.path.join(PORTFOLIO_DIR, "static")
+IMG_DIR = os.path.join(STATIC_DIR, "img")
+KEYBOARD_DIR = os.path.join(IMG_DIR, "keyboard")
+KEYBOARD_LIST = os.listdir(KEYBOARD_DIR)
+RELATIVE = os.path.relpath(KEYBOARD_DIR,CURRENT_DIR)
 
 load_dotenv()
 app = Flask(__name__)
@@ -15,7 +24,6 @@ mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
 )
 
 print(mydb)
-
 class TimelinePost(Model):
     name = CharField()
     email = CharField()
@@ -27,13 +35,22 @@ class TimelinePost(Model):
 mydb.connect()
 mydb.create_tables([TimelinePost])
 
+
+def keyboard_images():
+    keyboards = []
+    for file in KEYBOARD_LIST:
+        IMAGE_NAME = os.path.join(RELATIVE, file)
+        keyboards += [IMAGE_NAME]
+    return keyboards
+
 @app.route('/')
 def tylerwork():
-    return render_template('tylerwork.html', title="Tyler'sWork", url=os.getenv("URL"))
+    return render_template('tylerwork.html', title="Tyler's Work", url=os.getenv("URL"))
     
-@app.route('/tylershobbies/')
+@app.route('/hobbies')
 def tylerhobby():
-    return render_template('tylerhobby.html', title="Tyler's Hobbies")
+    keyboards = keyboard_images()
+    return render_template('tylerhobby.html', title="Tyler's Hobbies", images=keyboards)
 
 @app.route('/timeline')
 def timeline():

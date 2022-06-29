@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% extends 'base.html' %}
+
+<body>
+{% block content %}
+    <div class="container">
+        <h1>my hobbies</h1>
+        {% for boards in images %}
+            <div class="card">
+                <div class="card-body">
+                  <img src={{boards}} width="100" height="120">  
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+</body>
+</html>
