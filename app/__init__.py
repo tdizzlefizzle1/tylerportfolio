@@ -83,8 +83,10 @@ def post_time_line_post():
 
         if content == "":
             return "Invalid content", 400
-        elif "@" not in email:
+        elif "@" not in email or email == "":
             return "Invalid email", 400
+        elif name == "":
+            return "Invalid name", 400
         else:
             post = TimelinePost.create(name=name, email=email, content=content)
             return model_to_dict(post)
@@ -107,8 +109,8 @@ def delete_time_line_post():
     TimelinePost.delete_by_id(post_id)
     return "deleted post\n"
 
-# this endpoint handles bad requests (400 only), and returns a string depending on which parameter is missing from the bad request.
-# this does not cover many of the end cases, but you are using bootstrap forms on the frontend which already cover your input validation, so these backend checks are redundant
+# this endpoint handles bad requests, and returns a string depending on which parameter is missing from the bad request.
+# this does not cover many of the end cases, but you are using bootstrap forms on the frontend which already covers your input validation, so these backend checks are redundant
 @app.errorhandler(werkzeug.exceptions.BadRequest)
 def handle_bad_request(e):
 
@@ -118,7 +120,7 @@ def handle_bad_request(e):
         return "Invalid name", 400
     elif 'email' not in req.form:
         return "Invalid email", 400
-    elif ('content' not in req.form):
+    elif 'content' not in req.form:
         return "Invalid content", 400
     else:
         return "Invalid format, try again"
