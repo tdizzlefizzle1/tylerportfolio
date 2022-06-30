@@ -3,7 +3,7 @@ import os
 
 os.environ["TESTING"] = "true"
 
-from app import app
+from app import app, mydb
 from tests import test_db
 
 
@@ -50,6 +50,8 @@ class AppTestCase(unittest.TestCase):
         )  # first test if response is consistent with the default body
         assert "<p>Name: Sam</p>" in html  # then test if db data is properly generated
 
+
+    # test for parameter inconsistencies handling
     def test_malformed_timeline_post(self):
         # POST request missing name
         response = self.client.post("/api/timeline_post", data={"email": "john@example.com", "content": "Hello world, I'm John!"})
@@ -57,4 +59,16 @@ class AppTestCase(unittest.TestCase):
         html = response.get_data(as_text=True)
         assert "Invalid name" in html
 
-        
+        # POST request missing name
+        response = self.client.post("/api/timeline_post", data={"name": "John", "email": "john@example.com", "content": ""})
+        assert response.status_code == 400
+        html = response.get_data(as_text=True)
+        assert "Invalid content" in html
+
+        # POST request with invalid email
+        response = self.client.post("/api/timeline_post", data={"name": "John", "email": "not-email", "content": "Hello world, I'm John!"})
+        assert response.status_code == 400
+        html = response.get_data(as_text=True)
+        assert "Invalid email" in html
+
+    

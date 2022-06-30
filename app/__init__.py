@@ -80,8 +80,14 @@ def post_time_line_post():
         name = request.form["name"]
         email = request.form["email"]
         content = request.form["content"]
-        post = TimelinePost.create(name=name, email=email, content=content)
-        return model_to_dict(post)
+
+        if content == "":
+            return "Invalid content", 400
+        elif "@" not in email:
+            return "Invalid email", 400
+        else:
+            post = TimelinePost.create(name=name, email=email, content=content)
+            return model_to_dict(post)
    
 
 @app.route("/api/timeline_post", methods=["GET"])
@@ -106,13 +112,16 @@ def delete_time_line_post():
 @app.errorhandler(werkzeug.exceptions.BadRequest)
 def handle_bad_request(e):
 
-    req = str(request.form)
-    if 'name' not in req:
+    # at this point, the request is bad, now we check if a parameter is missing to determine the err msg
+    req = request
+    if 'name' not in req.form:
         return "Invalid name", 400
-    elif 'email' not in req:
+    elif 'email' not in req.form:
         return "Invalid email", 400
-    elif 'content' not in req:
+    elif ('content' not in req.form):
         return "Invalid content", 400
+    else:
+        return "Invalid format, try again"
 
 
 if __name__ == "__main__":
