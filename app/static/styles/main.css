@@ -1,10 +1,15 @@
 body{
+    /*font-family: wingdings;*/
     font-family:'Courier New', Courier, monospace;
 }
 
+h4,
 h1{
     font-weight: 600;
 }
-h4{
-    font-weight: 600;
+
+#reset:hover,
+#submit:hover,
+.stretched-link:hover{
+    background-color:gray;
 }
