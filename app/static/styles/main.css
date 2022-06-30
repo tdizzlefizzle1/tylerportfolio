@@ -8,8 +8,7 @@ h1{
     font-weight: 600;
 }
 
-#reset:hover,
-#submit:hover,
+#button-hover:hover,
 .stretched-link:hover{
     background-color:gray;
 }
