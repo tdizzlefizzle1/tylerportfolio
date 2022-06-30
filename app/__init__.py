@@ -1,8 +1,10 @@
+from asyncio.windows_events import NULL
 import os
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from peewee import *
 import datetime
+import werkzeug
 
 from playhouse.shortcuts import model_to_dict
 
@@ -75,12 +77,12 @@ def timeline():
 
 @app.route("/api/timeline_post", methods=["POST"])
 def post_time_line_post():
-    name = request.form["name"]
-    email = request.form["email"]
-    content = request.form["content"]
-    post = TimelinePost.create(name=name, email=email, content=content)
-    return model_to_dict(post)
-
+        name = request.form["name"]
+        email = request.form["email"]
+        content = request.form["content"]
+        post = TimelinePost.create(name=name, email=email, content=content)
+        return model_to_dict(post)
+   
 
 @app.route("/api/timeline_post", methods=["GET"])
 def get_time_line_post():
@@ -98,6 +100,19 @@ def delete_time_line_post():
     post_id = request.form["id"]
     TimelinePost.delete_by_id(post_id)
     return "deleted post\n"
+
+# this endpoint handles bad requests (400 only), and returns a string depending on which parameter is missing from the bad request.
+# this does not cover many of the end cases, but you are using bootstrap forms on the frontend which already cover your input validation, so these backend checks are redundant
+@app.errorhandler(werkzeug.exceptions.BadRequest)
+def handle_bad_request(e):
+
+    req = str(request.form)
+    if 'name' not in req:
+        return "Invalid name", 400
+    elif 'email' not in req:
+        return "Invalid email", 400
+    elif 'content' not in req:
+        return "Invalid content", 400
 
 
 if __name__ == "__main__":

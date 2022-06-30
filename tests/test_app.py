@@ -22,7 +22,7 @@ class AppTestCase(unittest.TestCase):
         assert '<p class="lead">UTSA \'23 - CS Major, Love doing nerd stuff</p>' in html
         assert '<a href="https://www.linkedin.com/in/tyler-holstein-38ab601a0/">'
 
-    # test GET request for timeline_post endpoint
+    # test GET and POST requests for timeline_post endpoints and frontend
     def test_timeline(self):
         response = self.client.get("/api/timeline_post")
         assert response.status_code == 200
@@ -49,3 +49,12 @@ class AppTestCase(unittest.TestCase):
             'placeholder="John Doe"' in html
         )  # first test if response is consistent with the default body
         assert "<p>Name: Sam</p>" in html  # then test if db data is properly generated
+
+    def test_malformed_timeline_post(self):
+        # POST request missing name
+        response = self.client.post("/api/timeline_post", data={"email": "john@example.com", "content": "Hello world, I'm John!"})
+        assert response.status_code == 400
+        html = response.get_data(as_text=True)
+        assert "Invalid name" in html
+
+        
