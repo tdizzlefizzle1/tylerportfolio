@@ -10,12 +10,12 @@
       <p class="lead">and other things i like</p>
       <br />
       <h4>building keyboards:</h4>
-      <div class="row">
+      <div class="row justify-content-start">
         {% for boards in images %}
-        <div class="col">
-          <div class="card" style="width: 400px">
+        <div class="col-auto my-2">
+          <div class="card" style="width: auto; height: auto">
             <div class="card-body">
-              <img src="{{boards}}" class="img-fluid" width="400" />
+              <img src="{{boards}}" class="img-fluid" width="400px" />
             </div>
           </div>
         </div>
@@ -23,68 +23,54 @@
       </div>
       <br /><br /><br />
     </div>
-    <div class="container my-5">
-      <h4>music i am into:</h4>
-      <div class="row">
-        <div class="col-6">
-          <iframe
-            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            frameborder="0"
-            height="450"
-            style="
-              width: 100%;
-              max-width: 660px;
-              overflow: hidden;
-              background: transparent;
-            "
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/oncle-jazz/1473993015"
-          ></iframe>
+    <div class="container pb-4">
+            <h4>music i am into:</h4>
+      <div class="row ">
+        <div class="col-auto col-4">
+          <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1115961286/size=large/bgcol=ffffff/linkcol=2ebd35/tracklist=false/track=930194497/transparent=true/" seamless><a href="https://menitrust.bandcamp.com/album/oncle-jazz">Oncle Jazz by Men I Trust</a></iframe>
+
         </div>
-        <div class="col-6">
-          <iframe
-            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            frameborder="0"
-            height="450"
-            style="
-              width: 100%;
-              max-width: 660px;
-              overflow: hidden;
-              background: transparent;
-            "
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/tako-tsubo/1545197529"
-          ></iframe>
-        </div>
-        <div class="col-6">
-          <iframe
-            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            frameborder="0"
-            height="450"
-            style="
-              width: 100%;
-              max-width: 660px;
-              overflow: hidden;
-              background: transparent;
-            "
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/rossz-csillag-alatt-sz%C3%BCletett/687479829"
-          ></iframe>
-        </div>
-        <div class="col-6">
-          <iframe
-            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            frameborder="0"
-            height="450"
-            style="
-              width: 100%;
-              max-width: 660px;
-              overflow: hidden;
-              background: transparent;
-            "
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/velocity-design-comfort/299710177"
-          ></iframe>
+        <div class="col-auto me-auto col-lg-6 col-12">
+            <iframe
+              style="border: 0; width: 100%; height: 120px"
+              src="https://bandcamp.com/EmbeddedPlayer/album=1681054922/size=large/bgcol=ffffff/linkcol=2ebd35/tracklist=false/artwork=small/track=2038718944/transparent=true/"
+              seamless
+              ><a href="https://magdalenabay.bandcamp.com/album/mercurial-world"
+                >Mercurial World by Magdalena Bay</a
+              ></iframe
+            >
+            <div class="w-100"></div>
+            <iframe
+              style="border: 0; width: 100%; height: 120px"
+              src="https://bandcamp.com/EmbeddedPlayer/album=3018795044/size=large/bgcol=ffffff/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/"
+              seamless
+              ><a
+                href="https://venetiansnares.bandcamp.com/album/rossz-csillag-alatt-sz-letett"
+                >Rossz Csillag Alatt Született by Venetian Snares</a
+              ></iframe
+            >
+            <div class="w-100"></div>
+
+            <iframe
+              style="border: 0; width: 100%; height: 120px"
+              src="https://bandcamp.com/EmbeddedPlayer/album=2729223065/size=large/bgcol=ffffff/linkcol=2ebd35/tracklist=false/artwork=small/track=2789437082/transparent=true/"
+              seamless
+              ><a
+                href="https://orangemilkrecords.bandcamp.com/album/wlfgrl-vinyl"
+                >WLFGRL vinyl by Machine Girl</a
+              ></iframe
+            >
+            <div class="w-100"></div>
+
+            <iframe
+              style="border: 0; width: 100%; height: 120px"
+              src="https://bandcamp.com/EmbeddedPlayer/album=710760602/size=large/bgcol=ffffff/linkcol=2ebd35/tracklist=false/artwork=small/track=2675881736/transparent=true/"
+              seamless
+              ><a href="https://tvgirl.bandcamp.com/album/who-really-cares"
+                >Who Really Cares by TV Girl</a
+              ></iframe
+            >
+            <div class="w-100"></div>
         </div>
       </div>
     </div>
