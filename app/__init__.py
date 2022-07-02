@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 import os
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
@@ -104,10 +103,15 @@ def get_time_line_post():
 
 @app.route("/api/timeline_post", methods=["DELETE"])
 def delete_time_line_post():
-
     post_id = request.form["id"]
     TimelinePost.delete_by_id(post_id)
-    return "deleted post\n"
+    return "Deleted post\n"
+
+@app.route("/api/timeline_post/purge", methods=["DELETE"])
+def delete_all_posts():
+    posts = TimelinePost.delete()
+    posts.execute()
+    return "Deleted all posts\n"
 
 # this endpoint handles bad requests, and returns a string depending on which parameter is missing from the bad request.
 # this does not cover many of the end cases, but you are using bootstrap forms on the frontend which already covers your input validation, so these backend checks are redundant
