@@ -18,7 +18,7 @@ class AppTestCase(unittest.TestCase):
         html = response.get_data(
             as_text=True
         )  # parse through response and store as text to test against existing sections of body
-        assert "<h1>tyler's Portfolio</h1>" in html
+        assert "<h1>tyler's Portfolio :LKSDFKLJHSDLKJFHSLKDJHFJKHSGDfjkhgasdfjhasd;klfjqopiwueyrgsjkl;af</h1>" in html
         assert '<p class="lead">UTSA \'23 - CS Major, Love doing nerd stuff</p>' in html
         assert '<a href="https://www.linkedin.com/in/tyler-holstein-38ab601a0/">'
 
