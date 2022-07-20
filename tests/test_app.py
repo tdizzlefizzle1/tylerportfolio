@@ -19,7 +19,7 @@ class AppTestCase(unittest.TestCase):
             as_text=True
         )  # parse through response and store as text to test against existing sections of body
         assert "<h1>tyler's Portfolio :LKSDFKLJHSDLKJFHSLKDJHFJKHSGDfjkhgasdfjhasd;klfjqopiwueyrgsjkl;af</h1>" in html
-        assert '<p class="lead">UTSA \'23 - CS Major, Love doing nerd stuff</p>' in html
+        assert '<p class="lead">UTSA \'23 - CS Major, Love doing nerd stuff hi</p>' in html
         assert '<a href="https://www.linkedin.com/in/tyler-holstein-38ab601a0/">'
 
     # test GET and POST requests for timeline_post endpoints and frontend
